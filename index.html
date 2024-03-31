@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9d2f59ffae.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/proxy_form.png" class="logo">
+                <img src="assets/images/proxy_form.png" class="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -24,26 +25,111 @@
             </div>
         </div>
     </div>
+
+
 <!-- About -->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/ME1.jpeg" alt="">
+                    <img src="assets/images/ME1.jpeg" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a hendrerit quam. Nam dignissim consectetur felis sit amet volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras vehicula ultricies enim nec accumsan. Sed tristique urna dolor, eu ullamcorper justo eleifend nec. Mauris ut vestibulum diam, fermentum laoreet lacus. Quisque consequat lobortis ligula, vitae molestie metus sodales quis. Suspendisse condimentum, mauris sit amet consequat cursus, velit enim vestibulum dolor, in volutpat nisi lacus sed orci. Donec sit amet neque eu turpis vehicula laoreet et ullamcorper dolo </p>
 
                     <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Web Development</li>
+                            <li><span>Mobile app</span><br>Mobile Applications Development</li>
+                            <li><span>AI</span><br>Customization of AI</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - current</span><br>Web Dev at Smart Nairobi</li>
+                            <li><span>2022-2023</span><br>TUM Coder's club</li>
+                            <li><span>2021-2022</span><br>Freelance developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024</span><br>Computer Science</li>
+                            <li><span>2023-2024</span><br>Software Engineering</li>
+                            <li><span>2016-2019</span><br>High School</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--------------- Services  ------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Mobile Development</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Artificial Intelligence</h2>
+                    <p>commonly used for creating responsive grid layouts where the number of columns adjusts based on the viewport size.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <script>
     
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabContents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tablename).classList.add("active-tab");
+                
+                var tablinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabContents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tablename).classList.add("active-tab");
+                
+                
+            }          
+            }
+
+   </script>
 </body>
 </html>
