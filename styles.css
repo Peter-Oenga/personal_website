@@ -157,11 +157,57 @@ nav ul li a:hover::after{
     padding: 40px;
     font-size: 14px;
     font-weight: 300;
-    border-right: 10px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
 }
 
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
 }
-.services-list div 
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.services-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.services-list div:hover{
+    color: #ff004f;
+    transform: translate(-10px);
+}
+
+/* My projects*/
+#my-projects{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+}
